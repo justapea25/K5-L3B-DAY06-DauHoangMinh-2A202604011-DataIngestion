@@ -86,8 +86,28 @@ def run(split: str) -> None:
     write_coherence_audit()
 
 
+LABEL_COLS = ("grounding_0_1_2", "metadata_complete_correct_Y_N", "coherence_0_1_2")
+
+
+def _one_line(row: list) -> list:
+    """Keep every CSV record on one physical line (spreadsheet viewers break on \\n)."""
+    return [v.replace("\n", " / ") if isinstance(v, str) else v for v in row]
+
+
+def _has_labels(path: Path) -> bool:
+    """True if an audit sheet already contains labels (never overwrite them)."""
+    if not path.exists():
+        return False
+    with open(path, encoding="utf-8") as f:
+        return any(row.get(c) for row in csv.DictReader(f) for c in LABEL_COLS)
+
+
 def write_test_audits(traces: list[dict]) -> None:
     """Blank sheets for manual grounding + metadata labels (5 test q × top-3)."""
+    for name in ("audit_grounding_test.csv", "audit_metadata_test.csv"):
+        if _has_labels(RESULTS / name):
+            print(f"skip {name}: already labelled")
+            return
     with open(RESULTS / "audit_grounding_test.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["strategy", "id", "question", "expected_answer", "evidence_quote",
@@ -95,9 +115,9 @@ def write_test_audits(traces: list[dict]) -> None:
                     "auto_hit@3", "grounding_0_1_2", "reason"])
         for t in traces:
             texts = [r["text"] for r in t["results"]] + [""] * (3 - len(t["results"]))
-            w.writerow([t["strategy"], t["id"], t["question"], t["expected_answer"],
+            w.writerow(_one_line([t["strategy"], t["id"], t["question"], t["expected_answer"],
                         t["evidence_quote"], " | ".join(r["chunk_id"] for r in t["results"]),
-                        *texts[:3], t["hit@3"], "", ""])
+                        *texts[:3], t["hit@3"], "", ""]))
     with open(RESULTS / "audit_metadata_test.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["strategy", "id", "rank", "chunk_id", "source", "page", "pages",
@@ -112,6 +132,9 @@ def write_test_audits(traces: list[dict]) -> None:
 
 def write_coherence_audit() -> None:
     """For each sample position, the chunk of each strategy that contains it."""
+    if _has_labels(RESULTS / "audit_coherence.csv"):
+        print("skip audit_coherence.csv: already labelled")
+        return
     pages = {json.loads(l)["page"]: json.loads(l)
              for l in open(RESULTS / "pages.jsonl", encoding="utf-8")}
     chunks = {"A": load_chunks("A"), "B": load_chunks("B")}
@@ -128,7 +151,7 @@ def write_coherence_audit() -> None:
         w = csv.writer(f)
         w.writerow(["position", "anchor_text", "strategy", "chunk_id", "chars",
                     "chunk_text", "coherence_0_1_2", "reason"])
-        w.writerows(rows)
+        w.writerows(_one_line(r) for r in rows)
 
 
 def main() -> None:
