@@ -39,7 +39,12 @@ Cấu hình được chọn **chỉ dựa trên dev**, theo thứ tự ưu tiên
 
 Sau khi đã cố định cấu hình, mới chạy test **một lần**. Không sửa chiến lược dựa trên kết quả test.
 
+### Quyết định sau dev (ghi trước khi chạy test)
+- Kết quả dev: A có Hit@1 9/15, Hit@3 14/15. B và C đều có Hit@1 14/15, Hit@3 15/15. Hai cấu hình B và C trả về kết quả **giống hệt nhau** cho cả 15 câu, vì 3 câu dev có filter (q12, q13, q14) khi không lọc vẫn cho top-3 đúng chương.
+- B và C hòa ở cả 4 tiêu chí. Coherence và tài nguyên cũng như nhau vì hai cấu hình dùng chung chunk. **Quy tắc phá hòa bổ sung:** chọn cấu hình có filter, vì nó không làm giảm chỉ số dev nào và giới hạn được phạm vi khi người dùng cung cấp trước.
+- **Cấu hình chọn: C.** Chưa có bằng chứng nào trên dev cho thấy filter cải thiện kết quả. Test được chạy một lần cho cả A, B và C để báo cáo.
+
 ## Nguồn gốc và kiểm chứng
 - Câu hỏi được soạn từ văn bản đã chuẩn hóa. Đoạn trích bằng chứng được kiểm tra tự động bằng script.
 - **Tác giả cần tự đọc lại** từng câu, đáp án và đoạn trích so với PDF gốc trước khi chạy thử. Có thể sửa hoặc thay câu. Sau khi chốt, ghi lại ngày chốt ở đây.
-- Ngày chốt benchmark: _(điền sau khi review)_
+- Ngày chốt benchmark: 2026-11-14, trước lần chạy dev đầu tiên.

@@ -1,5 +1,7 @@
 # Day 06 · Data Ingestion Engineering
 
+> **Bài làm:** corpus là Bộ luật Lao động 2019 ([data/manifest.json](data/manifest.json)). Cách setup và chạy xem [starter/README.md](starter/README.md); benchmark ở [benchmark/](benchmark/); kết quả ở [starter/results/](starter/results/); báo cáo ở [report/individual/2A202604011_DauHoangMinh.md](report/individual/2A202604011_DauHoangMinh.md).
+
 **Lab cá nhân** · **4 giờ** · **Dữ liệu tự chọn**
 
 Biến tài liệu thành kho tri thức có thể truy xuất cho AI agent, rồi đo xem cách chuẩn bị dữ liệu nào hiệu quả nhất.

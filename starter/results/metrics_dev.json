@@ -1,0 +1,78 @@
+{
+  "split": "dev",
+  "run_at": "2026-11-14T10:37:44+0700",
+  "embedding": {
+    "provider": "local (sentence-transformers)",
+    "model": "intfloat/multilingual-e5-small",
+    "dimensions": 384,
+    "normalize": true,
+    "query_prefix": "query: ",
+    "doc_prefix": "passage: ",
+    "max_seq_length": 512,
+    "device": "cpu",
+    "torch": "2.15.0",
+    "sentence_transformers": "5.7.0",
+    "cost_usd": 0
+  },
+  "top_k": 3,
+  "strategies": {
+    "A": {
+      "index": "A",
+      "use_filter": false,
+      "chunking": "fixed_size 500/50"
+    },
+    "B": {
+      "index": "B",
+      "use_filter": false,
+      "chunking": "by_article max 1500"
+    },
+    "C": {
+      "index": "B",
+      "use_filter": true,
+      "chunking": "by_article max 1500"
+    }
+  },
+  "summary": {
+    "A/dev": {
+      "n": 15,
+      "hit1": 9,
+      "hit3": 14,
+      "evidence_split": 5,
+      "filter_n": 3,
+      "filter_compliant": 3,
+      "filter_q_hit3": 3,
+      "misses": [
+        "q01"
+      ],
+      "hit@1": "9/15 = 0.60",
+      "hit@3": "14/15 = 0.93",
+      "filter_compliance_top3": "3/3"
+    },
+    "B/dev": {
+      "n": 15,
+      "hit1": 14,
+      "hit3": 15,
+      "evidence_split": 1,
+      "filter_n": 3,
+      "filter_compliant": 3,
+      "filter_q_hit3": 3,
+      "misses": [],
+      "hit@1": "14/15 = 0.93",
+      "hit@3": "15/15 = 1.00",
+      "filter_compliance_top3": "3/3"
+    },
+    "C/dev": {
+      "n": 15,
+      "hit1": 14,
+      "hit3": 15,
+      "evidence_split": 1,
+      "filter_n": 3,
+      "filter_compliant": 3,
+      "filter_q_hit3": 3,
+      "misses": [],
+      "hit@1": "14/15 = 0.93",
+      "hit@3": "15/15 = 1.00",
+      "filter_compliance_top3": "3/3"
+    }
+  }
+}

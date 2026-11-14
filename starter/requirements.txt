@@ -1,4 +1,10 @@
-# Core setup and PDF parsing. Choose and install an embedding SDK separately.
+# Core setup and PDF parsing
 psycopg[binary]==3.3.8
 pypdf>=5,<7
 python-dotenv>=1,<2
+# Vector store client + local embedding model (versions used for the reported run)
+pgvector==0.4.2
+numpy==2.5.4
+sentence-transformers==5.7.0
+torch==2.15.0
+transformers==5.23.0

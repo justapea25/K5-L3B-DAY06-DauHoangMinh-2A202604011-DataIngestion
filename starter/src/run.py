@@ -90,11 +90,14 @@ def write_test_audits(traces: list[dict]) -> None:
     """Blank sheets for manual grounding + metadata labels (5 test q × top-3)."""
     with open(RESULTS / "audit_grounding_test.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
-        w.writerow(["strategy", "id", "question", "expected_answer", "top3_chunk_ids",
+        w.writerow(["strategy", "id", "question", "expected_answer", "evidence_quote",
+                    "top3_chunk_ids", "top1_text", "top2_text", "top3_text",
                     "auto_hit@3", "grounding_0_1_2", "reason"])
         for t in traces:
+            texts = [r["text"] for r in t["results"]] + [""] * (3 - len(t["results"]))
             w.writerow([t["strategy"], t["id"], t["question"], t["expected_answer"],
-                        " | ".join(r["chunk_id"] for r in t["results"]), t["hit@3"], "", ""])
+                        t["evidence_quote"], " | ".join(r["chunk_id"] for r in t["results"]),
+                        *texts[:3], t["hit@3"], "", ""])
     with open(RESULTS / "audit_metadata_test.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["strategy", "id", "rank", "chunk_id", "source", "page", "pages",
@@ -131,7 +134,15 @@ def write_coherence_audit() -> None:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--split", default="dev", choices=["dev", "test", "all"])
-    run(ap.parse_args().split)
+    ap.add_argument("--audit-only", action="store_true",
+                    help="rebuild audit sheets from saved test traces (no retrieval)")
+    args = ap.parse_args()
+    if args.audit_only:
+        traces = [json.loads(l) for l in open(RESULTS / "traces_test.jsonl", encoding="utf-8")]
+        write_test_audits(traces)
+        write_coherence_audit()
+        return
+    run(args.split)
 
 
 if __name__ == "__main__":

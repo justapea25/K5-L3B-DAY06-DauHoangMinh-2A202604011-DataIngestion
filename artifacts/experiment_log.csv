@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed_size (ký tự; trên toàn văn bản),500,50,document_id/source/page/pages/chapter/section/articles,none,intfloat/multilingual-e5-small (384d; local CPU; cosine exact),Chunk cố định dễ cắt ngang khoản/điểm nên evidence bị tách và Hit@1 thấp hơn chunk theo Điều,9/15,14/15,3/5,421 chunks; 5/15 câu dev và 2/5 câu test có evidence bị tách giữa hai chunk; miss dev q01 và test q16 q18
+B,by_article (1 Điều/chunk; tách theo khoản khi >1500; lặp tiêu đề Điều),1500 (max),0,document_id/source/page/pages/chapter/section/articles,none,intfloat/multilingual-e5-small (384d; local CPU; cosine exact),Giữ trọn một Điều giúp chunk tự hiểu được và chứa đủ điều kiện/ngoại lệ nên Hit@1 và Hit@3 tăng so với A,14/15,15/15,5/5,252 chunks; dev q04 top-1 là Điều 36 (báo trước của người sử dụng lao động) thay vì Điều 35
+C,giống B (dùng chung dòng dữ liệu),1500 (max),0,giống B,chapter = giá trị cung cấp trong câu hỏi (chỉ khi câu có filter; 3 dev + 1 test),intfloat/multilingual-e5-small (384d; local CPU; cosine exact),Filter theo chương loại bỏ Điều tương tự ở chương khác cho câu có phạm vi rõ,14/15,15/15,5/5,Kết quả giống hệt B ở mọi câu: 4 câu có filter đã cho top-3 đúng chương ngay cả khi không lọc; được chọn theo quy tắc phá hòa ghi trước khi chạy test
