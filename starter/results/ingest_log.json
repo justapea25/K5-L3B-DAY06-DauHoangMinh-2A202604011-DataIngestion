@@ -1,0 +1,78 @@
+{
+  "pdf_sha256": "d18ea87cc5c48ae29a3068bf4699f6dbaefa34e2169a05c6ca3e877200adf7c7",
+  "issues": [
+    {
+      "page": 47,
+      "type": "short_page_excluded",
+      "chars": 19,
+      "text": "Nguyễn Thị Kim Ngân"
+    }
+  ],
+  "structure": {
+    "chapters_found": 17,
+    "chapters": [
+      "I",
+      "II",
+      "III",
+      "IV",
+      "V",
+      "VI",
+      "VII",
+      "VIII",
+      "IX",
+      "X",
+      "XI",
+      "XII",
+      "XIII",
+      "XIV",
+      "XV",
+      "XVI",
+      "XVII"
+    ],
+    "sections_found": 24,
+    "articles_found": 220,
+    "articles_sequential": true,
+    "articles_missing": [],
+    "articles_duplicated": [],
+    "paragraphs": 1264
+  },
+  "timing_seconds": {
+    "read_normalize": 3.089,
+    "chunk": 0.024
+  },
+  "chunk_params": {
+    "A": {
+      "size": 500,
+      "overlap": 50
+    },
+    "B": {
+      "max_size": 1500
+    }
+  },
+  "chunk_stats": {
+    "A": {
+      "chunks": 421,
+      "total_chars": 210042,
+      "min": 225,
+      "p25": 499,
+      "median": 500,
+      "p75": 500,
+      "max": 500,
+      "mean": 498.9,
+      "multi_page_chunks": 60,
+      "multi_chapter_chunks": 18
+    },
+    "B": {
+      "chunks": 252,
+      "total_chars": 189275,
+      "min": 101,
+      "p25": 419,
+      "median": 688,
+      "p75": 1104,
+      "max": 1486,
+      "mean": 751.1,
+      "multi_page_chunks": 52,
+      "multi_chapter_chunks": 0
+    }
+  }
+}

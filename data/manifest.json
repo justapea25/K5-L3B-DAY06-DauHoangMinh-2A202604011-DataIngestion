@@ -1,0 +1,430 @@
+{
+  "source_id": "bllđ-2019",
+  "title": "Bộ luật Lao động số 45/2019/QH14",
+  "issuer": "Quốc hội nước CHXHCN Việt Nam khóa XIV, kỳ họp thứ 8",
+  "issued_date": "2019-11-20",
+  "local_path": "starter/data/bo-luat-lao-dong-2019.pdf",
+  "source_path_or_url": "https://phongtochuc.hub.edu.vn/DATA/DOCUMENT/2022/11/24/lu%E1%BA%ADt%20lao%20%C4%91%E1%BB%99ng%20m%E1%BB%9Bi%20nh%E1%BA%A5t%202019.pdf",
+  "reference_urls": [
+    "https://thuvienphapluat.vn/van-ban/lao-dong-tien-luong/Law-45-2019-QH14-Labor-Code-432162.aspx",
+    "https://vbpl.vn"
+  ],
+  "license_or_permission": "Văn bản quy phạm pháp luật không thuộc đối tượng bảo hộ quyền tác giả (khoản 1 Điều 15 Luật Sở hữu trí tuệ 50/2005/QH11, sửa đổi bổ sung).",
+  "accessed_at": "2026-11-14",
+  "language": "vi",
+  "version": "Nguyên văn 45/2019/QH14 khi ban hành; KHÔNG phải văn bản hợp nhất. Các sửa đổi sau này (VBHN 125/VBHN-VPQH 2025, 18/VBHN-VPQH 2026) không có trong corpus.",
+  "provenance_note": "Bản PDF chuyển từ Word (metadata Creator: Microsoft Word 2016, 2022-11-24) đăng trên website trường ĐH Ngân hàng TP.HCM, không phải cổng chính thức. Cần đối chiếu các điều dùng trong benchmark với bản trên vbpl.vn / thuvienphapluat.",
+  "sha256": "d18ea87cc5c48ae29a3068bf4699f6dbaefa34e2169a05c6ca3e877200adf7c7",
+  "physical_pages": 47,
+  "content_pages": 46,
+  "page_counting_rule": "Trang PDF vật lý (1-based). Tính là trang nội dung nếu sau chuẩn hóa có ≥ 200 ký tự. Không có bìa/mục lục; trang chỉ có chữ ký bị loại.",
+  "excluded_pages": [
+    {
+      "page": 47,
+      "reason": "short_page_excluded",
+      "text": "Nguyễn Thị Kim Ngân"
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "chars": 3041,
+      "is_content": true,
+      "chapters": [
+        "I"
+      ]
+    },
+    {
+      "page": 2,
+      "chars": 4078,
+      "is_content": true,
+      "chapters": [
+        "I"
+      ]
+    },
+    {
+      "page": 3,
+      "chars": 4172,
+      "is_content": true,
+      "chapters": [
+        "I",
+        "II"
+      ]
+    },
+    {
+      "page": 4,
+      "chars": 4117,
+      "is_content": true,
+      "chapters": [
+        "II",
+        "III"
+      ]
+    },
+    {
+      "page": 5,
+      "chars": 3895,
+      "is_content": true,
+      "chapters": [
+        "III"
+      ]
+    },
+    {
+      "page": 6,
+      "chars": 3677,
+      "is_content": true,
+      "chapters": [
+        "III"
+      ]
+    },
+    {
+      "page": 7,
+      "chars": 4313,
+      "is_content": true,
+      "chapters": [
+        "III"
+      ]
+    },
+    {
+      "page": 8,
+      "chars": 4386,
+      "is_content": true,
+      "chapters": [
+        "III"
+      ]
+    },
+    {
+      "page": 9,
+      "chars": 4270,
+      "is_content": true,
+      "chapters": [
+        "III"
+      ]
+    },
+    {
+      "page": 10,
+      "chars": 4549,
+      "is_content": true,
+      "chapters": [
+        "III"
+      ]
+    },
+    {
+      "page": 11,
+      "chars": 4213,
+      "is_content": true,
+      "chapters": [
+        "III"
+      ]
+    },
+    {
+      "page": 12,
+      "chars": 4116,
+      "is_content": true,
+      "chapters": [
+        "III"
+      ]
+    },
+    {
+      "page": 13,
+      "chars": 3983,
+      "is_content": true,
+      "chapters": [
+        "III",
+        "IV"
+      ]
+    },
+    {
+      "page": 14,
+      "chars": 4107,
+      "is_content": true,
+      "chapters": [
+        "IV",
+        "V"
+      ]
+    },
+    {
+      "page": 15,
+      "chars": 3972,
+      "is_content": true,
+      "chapters": [
+        "V"
+      ]
+    },
+    {
+      "page": 16,
+      "chars": 4087,
+      "is_content": true,
+      "chapters": [
+        "V"
+      ]
+    },
+    {
+      "page": 17,
+      "chars": 4419,
+      "is_content": true,
+      "chapters": [
+        "V"
+      ]
+    },
+    {
+      "page": 18,
+      "chars": 4496,
+      "is_content": true,
+      "chapters": [
+        "V"
+      ]
+    },
+    {
+      "page": 19,
+      "chars": 4323,
+      "is_content": true,
+      "chapters": [
+        "V"
+      ]
+    },
+    {
+      "page": 20,
+      "chars": 3760,
+      "is_content": true,
+      "chapters": [
+        "V",
+        "VI"
+      ]
+    },
+    {
+      "page": 21,
+      "chars": 4175,
+      "is_content": true,
+      "chapters": [
+        "VI"
+      ]
+    },
+    {
+      "page": 22,
+      "chars": 3961,
+      "is_content": true,
+      "chapters": [
+        "VI",
+        "VII"
+      ]
+    },
+    {
+      "page": 23,
+      "chars": 4026,
+      "is_content": true,
+      "chapters": [
+        "VII"
+      ]
+    },
+    {
+      "page": 24,
+      "chars": 4165,
+      "is_content": true,
+      "chapters": [
+        "VII"
+      ]
+    },
+    {
+      "page": 25,
+      "chars": 3575,
+      "is_content": true,
+      "chapters": [
+        "VIII"
+      ]
+    },
+    {
+      "page": 26,
+      "chars": 4156,
+      "is_content": true,
+      "chapters": [
+        "VIII"
+      ]
+    },
+    {
+      "page": 27,
+      "chars": 4036,
+      "is_content": true,
+      "chapters": [
+        "VIII",
+        "IX"
+      ]
+    },
+    {
+      "page": 28,
+      "chars": 4246,
+      "is_content": true,
+      "chapters": [
+        "IX",
+        "X"
+      ]
+    },
+    {
+      "page": 29,
+      "chars": 3975,
+      "is_content": true,
+      "chapters": [
+        "X",
+        "XI"
+      ]
+    },
+    {
+      "page": 30,
+      "chars": 4293,
+      "is_content": true,
+      "chapters": [
+        "XI"
+      ]
+    },
+    {
+      "page": 31,
+      "chars": 4216,
+      "is_content": true,
+      "chapters": [
+        "XI"
+      ]
+    },
+    {
+      "page": 32,
+      "chars": 3822,
+      "is_content": true,
+      "chapters": [
+        "XI"
+      ]
+    },
+    {
+      "page": 33,
+      "chars": 3915,
+      "is_content": true,
+      "chapters": [
+        "XI",
+        "XII"
+      ]
+    },
+    {
+      "page": 34,
+      "chars": 4296,
+      "is_content": true,
+      "chapters": [
+        "XII",
+        "XIII"
+      ]
+    },
+    {
+      "page": 35,
+      "chars": 4261,
+      "is_content": true,
+      "chapters": [
+        "XIII"
+      ]
+    },
+    {
+      "page": 36,
+      "chars": 4620,
+      "is_content": true,
+      "chapters": [
+        "XIII",
+        "XIV"
+      ]
+    },
+    {
+      "page": 37,
+      "chars": 4369,
+      "is_content": true,
+      "chapters": [
+        "XIV"
+      ]
+    },
+    {
+      "page": 38,
+      "chars": 4368,
+      "is_content": true,
+      "chapters": [
+        "XIV"
+      ]
+    },
+    {
+      "page": 39,
+      "chars": 4671,
+      "is_content": true,
+      "chapters": [
+        "XIV"
+      ]
+    },
+    {
+      "page": 40,
+      "chars": 4371,
+      "is_content": true,
+      "chapters": [
+        "XIV"
+      ]
+    },
+    {
+      "page": 41,
+      "chars": 4247,
+      "is_content": true,
+      "chapters": [
+        "XIV"
+      ]
+    },
+    {
+      "page": 42,
+      "chars": 4017,
+      "is_content": true,
+      "chapters": [
+        "XIV"
+      ]
+    },
+    {
+      "page": 43,
+      "chars": 4347,
+      "is_content": true,
+      "chapters": [
+        "XIV",
+        "XV"
+      ]
+    },
+    {
+      "page": 44,
+      "chars": 3656,
+      "is_content": true,
+      "chapters": [
+        "XV",
+        "XVI",
+        "XVII"
+      ]
+    },
+    {
+      "page": 45,
+      "chars": 3816,
+      "is_content": true,
+      "chapters": [
+        "XVII"
+      ]
+    },
+    {
+      "page": 46,
+      "chars": 3606,
+      "is_content": true,
+      "chapters": [
+        "XVII"
+      ]
+    },
+    {
+      "page": 47,
+      "chars": 19,
+      "is_content": false,
+      "chapters": []
+    }
+  ],
+  "total_content_chars": 189180,
+  "metadata_fields": {
+    "document_id": "str – ID nguồn",
+    "source": "str – đường dẫn file",
+    "page": "int – trang PDF bắt đầu chunk; `pages` = mọi trang chunk chạm tới",
+    "chapter": "str – số La Mã của Chương (I…XVII), lấy từ dòng 'Chương X' trong văn bản; trường dùng để FILTER",
+    "chapter_title": "str – tên chương in hoa trong văn bản",
+    "section": "str|null – 'Mục n. …' nếu chương có mục",
+    "articles": "list[int] – các Điều nằm trong chunk",
+    "year": "int – năm ban hành 2019 (hằng số, chỉ để truy vết)"
+  }
+}
